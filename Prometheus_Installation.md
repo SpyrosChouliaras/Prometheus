@@ -84,9 +84,11 @@ The above configuration will set up a scrape every 15 seconds. Save and close th
 
 
 We now need to create a file for the systemd service. Issue the command:
+
 ```sh
-sudo nano /etc/systemd/system/prometheus.service
+$ sudo nano /etc/systemd/system/prometheus.service
 ```
+
 In that new file, add the following content:
 
 ```js
