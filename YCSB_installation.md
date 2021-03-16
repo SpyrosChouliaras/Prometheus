@@ -9,7 +9,7 @@ $ cd ycsb-0.17.0
 ```
 ## Install JAVA.
 
-### Check if Java is already installed
+#### Check if Java is already installed
 
 ```sh
 $ java -version
