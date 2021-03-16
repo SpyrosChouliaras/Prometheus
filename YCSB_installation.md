@@ -1,4 +1,4 @@
-# Install YCSB and configure for MongoDB
+# Install YCSB and run a workload in MongoDB
 
 ## Download the latest release of YCSB.
 
