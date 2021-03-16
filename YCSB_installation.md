@@ -81,5 +81,56 @@ Default locale: en, platform encoding: UTF-8
 OS name: "linux", version: "5.4.0-1037-gcp", arch: "amd64", family: "unix"
 ```
 
+## Run YCSB in MongoDB
+
+### Check Mongodb is active
+
+```sh
+$ systemctl status mongod 
+```
+
+### You’ll see the following output:
+
+```sh
+● mongod.service - MongoDB Database Server
+   Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+   Active: active (running) since Tue 2021-03-16 11:35:35 UTC; 1h 20min ago
+     Docs: https://docs.mongodb.org/manual
+ Main PID: 3545 (mongod)
+   CGroup: /system.slice/mongod.service
+           └─3545 /usr/bin/mongod --config /etc/mongod.conf
+Mar 16 11:35:35 mongodb systemd[1]: Started MongoDB Database Server.
+```
+### Load YCSB workload ( we will use workload type A) and save the output to outputLoad.txt file
+
+```sh
+$ ./bin/ycsb load mongodb -s -P workloads/workloada > outputLoad.txt
+```
+### Run YCSB workload and save the output to outputRun.txt file
+
+```sh
+$ ./bin/ycsb run mongodb -s -P workloads/workloada > outputRun.txt
+```
+
+### Adjust workload parameters based on your needs:
+
+```sh
+$ nano /workloads/workloada
+```
+
+### You’ll see the following output:
+
+```sh
+recordcount=100000    #number of records
+operationcount=100000   #numer of operations
+workload=site.ycsb.workloads.CoreWorkload
+readallfields=true
+readproportion=0.5   #Read proportion
+updateproportion=0.5  #Write proportion
+scanproportion=0  #Scan proportion
+insertproportion=0  #Insert proportion
+requestdistribution=zipfian #Distribution 
+```
 
 for more information about JAVA installation visit https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+for more information about YCSB visit https://github.com/brianfrankcooper/YCSB
