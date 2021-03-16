@@ -167,7 +167,13 @@ ExecStart=/usr/local/bin/node_exporter
 WantedBy=multi-user.target
 ```
 
-Save and close that file. Reload systemd with the command sudo systemctl daemon-reload and then start and enable node_explorer with the following commands:
+Save and close that file. Reload systemd with the command:
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Then start and enable node_explorer with the following commands:
 
 ```sh
 sudo systemctl start node_explorer
