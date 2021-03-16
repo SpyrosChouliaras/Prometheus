@@ -65,6 +65,6 @@ $ use database_name
 $ db.dropDatabase()
 ```
 
-
+for more information visit: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 
