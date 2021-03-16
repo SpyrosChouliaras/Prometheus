@@ -64,8 +64,9 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 
 A new configuration file must be created. Issue the command:
 
--sudo nano /etc/prometheus/prometheus.yml.
-
+```sh
+$ sudo nano /etc/prometheus/prometheus.yml.
+```
 In that file add the following content:
 
 ```js
