@@ -51,6 +51,16 @@ $ sudo systemctl restart mongod
 $ sudo systemctl stop mongod
 ```
 
+## Begin using MongoDB.
 
+```sh
+$ mongo
+```
 
+### Show databases, use and drop a database
 
+```sh
+$ show databases
+$ use database_name
+$ db.dropDatabase()
+```
