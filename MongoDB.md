@@ -64,3 +64,7 @@ $ show databases
 $ use database_name
 $ db.dropDatabase()
 ```
+
+
+
+
