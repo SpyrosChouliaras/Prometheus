@@ -101,7 +101,7 @@ $ systemctl status mongod
            └─3545 /usr/bin/mongod --config /etc/mongod.conf
 Mar 16 11:35:35 mongodb systemd[1]: Started MongoDB Database Server.
 ```
-### Load YCSB workload ( we will use workload type A) and save the output to outputLoad.txt file
+### Load YCSB workload (workload type A) and save the output to outputLoad.txt file
 
 ```sh
 $ ./bin/ycsb load mongodb -s -P workloads/workloada > outputLoad.txt
@@ -110,7 +110,11 @@ $ ./bin/ycsb load mongodb -s -P workloads/workloada > outputLoad.txt
 
 ```sh
 $ ./bin/ycsb run mongodb -s -P workloads/workloada > outputRun.txt
+
+** $ ./bin/ycsb run mongodb -s -P workloads/workloada -p status.interval = 1 > outputRun.txt
 ```
+- -p status.interval= (default=10) Controls the number of seconds between status reports and therefore between HdrHistogram snapshots reported.
+
 
 ### Adjust workload parameters based on your needs:
 
