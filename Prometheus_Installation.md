@@ -182,7 +182,13 @@ sudo systemctl enable node_exporter
 ```
 
 Configure Prometheus to scrape node_exporter
-Let's go back to the Prometheus configuration file. Open that with the command sudo nano /etc/prometheus/prometheus.yml. At the end of that file, add the following:
+Let's go back to the Prometheus configuration file. Type the command below to edit the file:
+
+```sh
+sudo nano /etc/prometheus/prometheus.yml
+```
+
+At the end of that file, add the following:
 
 ```sh
  - job_name: 'node_exporter'
