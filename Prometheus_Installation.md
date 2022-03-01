@@ -173,12 +173,12 @@ Save and close that file. Reload systemd with the command:
 sudo systemctl daemon-reload
 ```
 
-Then start and enable node_explorer with the following commands:
+Then start and enable node_exporter with the following commands:
 
 ```sh
-sudo systemctl start node_explorer
+sudo systemctl start node_exporter
 
-sudo systemctl enable node_explorer
+sudo systemctl enable node_exporter
 ```
 
 Configure Prometheus to scrape node_exporter
