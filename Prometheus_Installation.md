@@ -196,12 +196,12 @@ At the end of that file, add the following:
     static_configs:
       - targets: ['localhost:9100']
 ```  
-     
-```sh
+
 Save and close that file. Restart Prometheus with the command:
 
-```      
+```sh
 sudo systemctl restart prometheus
+```      
 
 At this point, Prometheus is now scraping data from node_export. If you point your browser back to http://SERVER_IP:9090 (where SERVER_IP is the IP address of the server), you can select one of the many data queries from the drop-down and execute it to reveal a graph, based on the data scraped.
 
