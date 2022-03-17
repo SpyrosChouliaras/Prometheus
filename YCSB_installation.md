@@ -139,4 +139,10 @@ requestdistribution=zipfian #Distribution
 for more information about JAVA installation visit https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
 for more information about YCSB visit https://github.com/brianfrankcooper/YCSB
 
-change
+## Run YCSB in Cassandra cluster
+
+### Creating a table for use with YCSB
+
+For keyspace ycsb, table usertable:
+
+
