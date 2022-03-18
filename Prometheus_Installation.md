@@ -134,7 +134,7 @@ curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.17.0/n
 Extract the file with the following command:
 
 ```sh
-tar xvf node_exporter-0.15.1.linux-amd64.tar.gz
+tar xvf node_exporter-0.17.0.linux-amd64.tar.gz
 ```
 
 Copy the binary file into the necessary directory, and give it the proper permissions with the following commands:
