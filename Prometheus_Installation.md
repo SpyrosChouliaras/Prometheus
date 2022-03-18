@@ -128,7 +128,7 @@ As I mentioned, we're going to add node_exporter. The first thing you must down 
 ```sh
 cd
 
-curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.15.1/node_exporter-0.15.1.linux-amd64.tar.gz
+curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz
 ```
 
 Extract the file with the following command:
